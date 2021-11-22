@@ -20,7 +20,11 @@ if (isset($_GET['action'])) {
         HydrateOnePilote();
     }
     if ($_GET['action'] == 'AskVueVolByFab') {
-        ListeVueVolbyFabricant($_POST['fab']);
+        if(!empty($_POST['fab'])){
+            ListeVueVolbyFabricant($_POST['fab']);
+        } else {
+            header('Location: AskVueVolByFab.php');
+        }
     }
 }
 

@@ -19,8 +19,13 @@ class FabricantDAO extends ModeleAbstract
 
         // On execute la requête
         $ResultatReq = $this->executerRequete($req);
-        $abc = $ResultatReq->fetchAll();
+        $Resultat = $ResultatReq->fetchAll();
+
+        if(empty($Resultat))
+        {
+            $resultat = "Il n'y aucune vue pour ce fabricant.";
+        }
         // On retourne le résultat
-        return $abc;
+        return $Resultat;
     }
 }
