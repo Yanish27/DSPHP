@@ -1,6 +1,6 @@
 <?php 
 declare (strict_types=-1);
-class PiloteDAO extends ModeleAbstract;
+class PiloteDAO extends ModeleAbstract{
 
 public function GetOnePilote($idpiloti)
 {

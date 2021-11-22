@@ -1,11 +1,9 @@
 <?php
 
-public function ListeVueVolbyFabricant($Fabricant)
+function ListeVueVolbyFabricant($fab)
 {
-    $Fab = new FabricantDAO();
-    $GetListeVueVolbyFabricant = $Fab->GetVueVolByFab($Fabricant);
-
-    $DataFab1 = GetListeVueVolbyFabricant->fetch(PDO::FETCH_ASSOC);
-    var_dump($DataFab1);
+    
+    $Fabricant = new FabricantDAO();
+    var_dump($Fabricant->GetVueVolByFab($fab));
 
 }
